@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<html>
+<head>
+
+    <style>
+        body {
+            background-image: url('../../Images/Banner.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            transform: translate(50%,10%);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+
+                <div class="card shadow">
+                    <div class="card-header pt-7 shadow">
+                        <table style="width:100%">
+                            <tr>
+                                <td><h2 class="pt-2">Employee Details</h2></td>
+                                <td style="text-align:right;">
+                                    <a href="@Url.Action("EmployeeLogs","Home")" class="btn btn-outline-primary">Logs</a>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+
+                    @using (Html.BeginForm("Create", "Home"))
+                    {
+
+                <div class="card-body pt-5">
+
+                    <!-- Table -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-4" style="text-align:right;">
+                                    <label class="fs-7 fw-semibold form-label">
+                                        <span data-bs-toggle="tooltip" title="Enter Firstname">Firstname</span>
+
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input autocomplete="off" placeholder="Enter Your Firstname" class="form-control form-control-sm" id="Firstname" name="Firstname" required="required" type="text" value="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row mt-3">
+                                <div class="col-4" style="text-align:right;">
+                                    <label class="fs-7 fw-semibold form-label">
+                                        <span data-bs-toggle="tooltip" title="Enter Middlename">Middlename</span>
+
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input autocomplete="off" placeholder="Enter Your Middlename" class="form-control form-control-sm" id="Middlename" name="Middlename" required="required" type="text" value="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row mt-3">
+                                <div class="col-4" style="text-align:right;">
+                                    <label class="fs-7 fw-semibold form-label">
+                                        <span data-bs-toggle="tooltip" title="Enter Lastname">Lastname</span>
+
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input autocomplete="off" placeholder="Enter Your Lastname" class="form-control form-control-sm" id="Lastname" name="Lastname" required="required" type="text" value="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row mt-3">
+                                <div class="col-4" style="text-align:right;">
+                                    <label class="fs-7 fw-semibold form-label">
+                                        <span data-bs-toggle="tooltip" title="Enter Mobile No">Mobile No</span>
+
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input autocomplete="off" placeholder="Enter Your Mobile No." class="form-control form-control-sm" id="MobileNo" pattern="[0-9]{10}" name="MobileNo" required="required" type="number" value="" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row mt-3">
+                                <div class="col-4" style="text-align:right;">
+                                    <label class="fs-7 fw-semibold form-label">
+                                        <span data-bs-toggle="tooltip" title="">Gender</span>
+
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <select id="Gender" name="Gender" class="form-control form-select form-select-sm">
+                                        <option value="" selected disabled>Select a Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class=" row mt-5">
+                        <div class="col-12 text-center">
+                            <input type="submit" class="btn btn-outline-primary" value="Create" />
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+
+                </div>
+
+
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts
+    {
+    
+    }
+</body>
+</html>
+
+
